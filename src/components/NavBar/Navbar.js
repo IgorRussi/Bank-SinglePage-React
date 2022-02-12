@@ -1,5 +1,6 @@
 import React from "react";
 import { FaBars } from "react-icons/fa";
+
 import {
   Nav,
   NavbarContainer,
@@ -12,13 +13,13 @@ import {
   NavBtnLink,
 } from "./NavbarElement";
 
-export default function Navbar() {
+export default function Navbar(toggle) {
   return (
     <>
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">MyBank</NavLogo>
-          <MobileIcon>
+          <MobileIcon onClick={toggle}>
             <FaBars></FaBars>
           </MobileIcon>
           <NavMenu>
