@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Video from "../../videos/video3.mp4";
 import {
   HeroContainer,
   HeroBg,
@@ -12,8 +12,6 @@ import {
   ArrowRight,
 } from "./HeroElements";
 import { Button } from "../ButtonElement";
-import Video from "../../videos/video.mp4";
-// import { ArrowForward } from "@material-ui/icons";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -21,10 +19,11 @@ const HeroSection = () => {
   const onHover = () => {
     setHover(!hover);
   };
+
   return (
-    <HeroContainer>
+    <HeroContainer id="home">
       <HeroBg>
-        <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
+        <VideoBg autoPlay loop muted src={Video} type="video3/mp4" />
       </HeroBg>
       <HeroContent>
         <HeroH1>Virtual Banking Made Easy</HeroH1>

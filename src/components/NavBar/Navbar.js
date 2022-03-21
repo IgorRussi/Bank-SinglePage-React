@@ -18,7 +18,7 @@ export default function Navbar(toggle) {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">MyBank</NavLogo>
+          <NavLogo to="home">MyBank</NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars></FaBars>
           </MobileIcon>
@@ -27,13 +27,13 @@ export default function Navbar(toggle) {
               <NavLinks to="about">About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="about">discover</NavLinks>
+              <NavLinks to="discover">Discover</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="about">services</NavLinks>
+              <NavLinks to="Signup">Services</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="about">Sign up</NavLinks>
+              <NavLinks to="services">Sign up</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>

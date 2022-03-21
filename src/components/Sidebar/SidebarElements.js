@@ -5,7 +5,8 @@ import { Link as LinkR } from "react-router-dom";
 
 export const SidebarContainer = styled.aside`
   position: fixed;
-  z-index: 900;
+  display: none;
+  z-index: -1;
   width: 100%;
   height: 100%;
   background: #0d0d0d;
@@ -16,7 +17,11 @@ export const SidebarContainer = styled.aside`
   transition: 0.3s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   top: ${({ isOpen }) => (isOpen ? "0" : "-100")};
-  top: 0;
+  /* top: 0; */
+
+  @media screen and (max-width: 760px) {
+    z-index: 1001;
+  } ;
 `;
 
 export const CloseIcon = styled(FaTimes)`
@@ -49,20 +54,25 @@ export const SidebarMenu = styled.ul`
 `;
 
 export const SidebarLink = styled(LinkS)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  text-decoration: none;
-  list-style: none;
-  transition: 0.2s ease-in-out;
-  color: #fff;
-  cursor: pointer;
+  display: none;
 
-  &:hover {
-    color: #01bf71;
+  @media screen and (max-width: 768px) {
+    display: show;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    list-style: none;
     transition: 0.2s ease-in-out;
-  }
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      color: #01bf71;
+      transition: 0.2s ease-in-out;
+    }
+  } ;
 `;
 
 export const SidebtnWrap = styled.div`

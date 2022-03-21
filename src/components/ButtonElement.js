@@ -15,9 +15,11 @@ export const Button = styled(Link)`
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in-out;
+  z-index: 1;
 
   &:hover {
     transition: all 0.2s ease-in-out;
+
     background: ${({ primary }) => (primary ? "#fff" : "#01bf71")};
   }
 `;
