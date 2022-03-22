@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
+import { animateScroll as scroll } from "react-scroll";
 
 import {
   Nav,
@@ -28,26 +29,68 @@ export default function Navbar(toggle) {
     window.addEventListener("scroll", changeNav);
   }, []);
 
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo to="home">MyBank</NavLogo>
+          <NavLogo to="/" onClick={toggleHome}>
+            MyBank
+          </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars></FaBars>
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="about">About</NavLinks>
+              <NavLinks
+                to="about"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                About
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="discover">Discover</NavLinks>
+              <NavLinks
+                to="discover"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Discover
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="Signup">Services</NavLinks>
+              <NavLinks
+                to="Signup"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Services
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="services">Sign up</NavLinks>
+              <NavLinks
+                to="services"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Sign up
+              </NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
