@@ -57,6 +57,7 @@ export const FooterLink = styled.div`
   &:hover {
     color: #01bf71;
     transition: 0.3s ease-out;
+    cursor: pointer;
   }
 `;
 
